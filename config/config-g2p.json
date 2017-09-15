@@ -1,18 +1,18 @@
 {
-  "title": "My Linked Data Fragments server",
+  "title": "GA4GH Linked Data Fragments Server",
 
   "datasources": {
     "dbpedia": {
-      "title": "DBpedia 2014",
-      "type": "HdtDatasource",
-      "description": "DBpedia 2014 with an HDT back-end",
-      "settings": { "file": "data/dbpedia2014.hdt" }
+      "title": "Monarch Cancer Gene Drug Interactions",
+      "type": "TurtleDatasource",
+      "description": "Cancer Gene Drug interactions from the Monarch database",
+      "settings": { "url": "https://raw.githubusercontent.com/monarch-initiative/mckb/master/ttl/cgd.ttl" }
     },
     "dbpedia-sparql": {
-      "title": "DBpedia 3.9 (Virtuoso)",
+      "title": "Uniprot",
       "type": "SparqlDatasource",
-      "description": "DBpedia 3.9 with a Virtuoso back-end",
-      "settings": { "endpoint": "http://dbpedia.restdesc.org/", "defaultGraph": "http://dbpedia.org" }
+      "description": "Uniprot with default taxonomy graph",
+      "settings": { "endpoint": "http://sparql.uniprot.org/sparql", "defaultGraph": "http://sparql.uniprot.org/taxonomy" }
     }
   },
 
